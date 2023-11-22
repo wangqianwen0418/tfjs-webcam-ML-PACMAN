@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/wangqianwen0418/tfjs-webcam-ML-PACMAN",
   "name": "tfjs-examples-webcam-transfer-learning",
   "version": "0.1.0",
   "description": "",
@@ -9,14 +10,17 @@
     "vega-embed": "^6.17.0"
   },
   "scripts": {
-    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
+    "watch": "cross-env NODE_ENV=development parcel index.html --open",
     "build": "cross-env NODE_ENV=production parcel build --no-scope-hoist index.html --public-url ./",
-    "link-local": "yalc link"
+    "link-local": "yalc link",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "buffer": "^6.0.3",
     "clang-format": "~1.2.2",
     "cross-env": "^5.1.6",
+    "gh-pages": "^6.1.0",
     "parcel": "~2.3.2",
     "process": "^0.11.10",
     "yalc": "~1.0.0-pre.53"
