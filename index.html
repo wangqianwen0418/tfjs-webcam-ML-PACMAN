@@ -24,6 +24,7 @@ limitations under the License.
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./loading-icon.css">
 </head>
 
 <body>
@@ -37,24 +38,38 @@ limitations under the License.
 
 
 
-  <div id="status">Loading mobilenet...</div>
+  <div id="status">
+    <div class="lds-ring loading-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="status-text">
+      Loading mobilenet...
+    </div>
+  </div>
 
   <div class="controller-panels" id="controller" style="display:none">
 
 
 
     <div class="panel joystick-panel">
-
+      <span class="instruction">
+        1:
+        Click the [add example] button will add the current camera view as an example for the corresponding control.
+      </span>
       <div class="panel-row panel-row-top">
 
         <div class="panel-cell panel-cell-left panel-cell-fill">
-          <p class="help-text">
+          <!-- <p class="help-text">
             Click to add the <br />
             current camera <br />
             view as an example <br />
             for that control
-          </p>
-        </div><!-- ./panel-cell -->
+          </p> -->
+        </div>
+        <!-- ./panel-cell -->
 
         <div class="panel-cell panel-cell-center">
           <div class="thumb-box">
@@ -137,7 +152,9 @@ limitations under the License.
     </div><!-- /.panel -->
 
     <div class="panel training-panel">
-      First, you need to teach a ML model how to read directions from your camera.
+      <span class="instruction">
+        2: Click [Train] to train the model.
+      </span>
       <!-- Big buttons. -->
       <div class="panel-row big-buttons">
         <button id="train">
