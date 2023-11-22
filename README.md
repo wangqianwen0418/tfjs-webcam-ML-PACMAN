@@ -1,50 +1,53 @@
-# Play Pacman via the Webcam: Teach an ML model to read gestures
+# Play Pac-Man using Gestures: Teach an ML model to read your gestures
 
-In this project, an ML model will predict direction from an image in webcam using transfer
-learning.
+In this project, an ML model will predict directions from an image in web camera.
+We can fine-tune a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model  to predict 4 different classes (i.e, up, down, left, right) as defined by the user.
 
-We can use a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model and train another model
-using an internal mobilenet activation to predict 4 different classes (i.e, up, down, left, right) from the webcam defined by the user.
+### How Does the Project Work
+Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 
-[See this example live!](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
-
-
-## Run and Develop the Project in Your Laptop
-
-### Preparation
-- You need a code IDE such as [vscode](https://code.visualstudio.com/download) installed in your laptop. I highly recommend vscode but you should feel free to use whatever IDE you prefer.
-- Have a [github](http://github.com) account, `fork` this project to your github and `clone` the forked project to your laptop. [How to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-- Install [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to your laptop.
+1. **Add Example**: Use your web camera to provide example images for the four different classes (up, down, left, right).
+2. **Train**: Fine-tune the ML model with these images.
+3. **Play**: Start playing Pac-Man by making gestures in front of your web camera.
 
 
-### install npm dependency
-Use vscode to open the folder of the cloned project.
+### Run and Develop the Project in Your Laptop
 
-Open the integrated terminal using either the `Terminal > New Terminal` or `View > Terminal` in the menu.
+#### Preparation
+- Ensure you have a code IDE like [VSCode](https://code.visualstudio.com/download) installed. VSCode is recommended, but feel free to use any IDE of your choice.
+- Create a [GitHub](http://github.com) account, `fork` this repository, and `clone` the forked repository to your local machine. [Learn how to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+- [Install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine.
 
-In terminal, run the command below to install npm packages.
-```npm install```
-you only need to run the comand the first time
+#### Install npm Dependencies
+1. Open the cloned project folder with VSCode.
+2. Launch the VSCode integrated terminal from menu: `Terminal > New Terminal` or `View > Terminal`.
+3. In the terminal, run `npm install` to install necessary npm packages (first-time setup only).
 
-then run
-```npm run watch```
-The project will automatically open in your web browser.
-
-every time you change code in the vscode, the webpage will automatically updated after refresh.
-
-
-## Deploy to Github Page
-
-### 1. Configure GitHub Pages
+### Run the Project
+  Execute `npm run watch` in the terminal.
+ 
+  The project will open in your default web browser.
+  Any code changes will automatically update the webpage.
 
 
-In your web browser, navigate to the GitHub repository, click on the tab labeled "Settings".
-In the sidebar, in the "Code and automation" section, click on "Pages"
-Configure the "Build and deployment" settings like this:
-- Source: Deploy from a branch
-- Branch: gh-pages; Folder: / (root)  
+### Deploy to Github Page
 
-Click on the "Save" button.
+#### 1. Configure GitHub Page
 
-### 2. Deploy
-```npm run deploy```
+1. In your web browser, go to the forked project in your github, and select the "Settings" tab.
+2. In the sidebar, under "Code and automation," choose "Pages."
+3. Set up "Build and deployment" as follows:
+   - Source: `Deploy from a branch`
+   - Branch: `gh-pages`; Folder: `/ (root)`
+4. Click "Save."
+
+
+#### 2. Deploy
+  Run `npm run deploy` in your terminal to deploy the project to GitHub Pages.
+  You can now share this demo via `https://{your_github_userid}.github.io/tfjs-webcam-ML-PACMAN/`
+
+
+### Acknowledgement
+
+This project is a modified version based on the official TensorFlow.js demos. 
+For more information and additional context, visit [TensorFlow.js Demos](https://www.tensorflow.org/js/demos).
