@@ -28,6 +28,7 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
  
   The project will open in your default web browser.
   Any code changes will automatically update the webpage.
+  Google Chrome is recommended for the development.
 
 
 ### Deploy to Github Page

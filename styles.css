@@ -45,7 +45,7 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: rgba(255, 255, 255, 0.7);
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.45em;
   overflow: hidden;
   padding: 20px 0;
@@ -148,7 +148,7 @@ header b {
   padding: 0;
   text-align: center;
 }
-.controller-panels button {
+.controller-panels button,  button#predict{
   background: none;
   border: none;
   box-sizing: border-box;
@@ -156,6 +156,16 @@ header b {
   margin: 0;
   padding: 0;
 }
+
+.big-buttons.play-control {
+  width: 100%;
+  background-color: black;
+}
+
+button#predict{
+  margin: 5px auto 0;
+}
+
 #train-status {
   width: 124px;
 }
@@ -168,6 +178,7 @@ header b {
   align-items: center;
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
 }
 .big-buttons button span {
   border-bottom: 2px solid #484848;
