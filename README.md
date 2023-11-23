@@ -3,7 +3,7 @@
 In this project, an ML model will predict directions from an image in web camera.
 We can fine-tune a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model  to predict 4 different classes (i.e, up, down, left, right) as defined by the user.
 
-### How Does the Project Work
+## How Does the Project Work
 Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 
 1. **Add Example**: Use your web camera to provide example images for the four different classes (up, down, left, right).
@@ -11,7 +11,7 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 3. **Play**: Start playing Pac-Man by making gestures in front of your web camera.
 
 
-### Run and Develop the Project in Your Laptop
+## Run and Develop the Project in Your Laptop
 
 #### Preparation
 - Ensure you have a code IDE like [VSCode](https://code.visualstudio.com/download) installed. VSCode is recommended, but feel free to use any IDE of your choice.
@@ -23,7 +23,7 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 2. Launch the VSCode integrated terminal from menu: `Terminal > New Terminal` or `View > Terminal`.
 3. In the terminal, run `npm install` to install necessary npm packages (first-time setup only).
 
-### Run the Project
+#### Run the Project
   Execute `npm run watch` in the terminal.
  
   The project will open in your default web browser.
@@ -31,9 +31,12 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
   Google Chrome is recommended for the development.
 
 
-### Deploy to Github Page
+## Deploy to Github Page
 
-#### 1. Configure GitHub Page
+#### 1. Build and Push
+  Run `npm run deploy` in your terminal
+
+#### 2. Configure GitHub Page
 
 1. In your web browser, go to the forked project in your github, and select the "Settings" tab.
 2. In the sidebar, under "Code and automation," choose "Pages."
@@ -42,13 +45,12 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
    - Branch: `gh-pages`; Folder: `/ (root)`
 4. Click "Save."
 
+![image](https://github.com/wangqianwen0418/tfjs-webcam-ML-PACMAN/assets/19774198/8f1a2975-7fa0-4f33-83cf-5ad706d70af6)
 
-#### 2. Deploy
-  Run `npm run deploy` in your terminal to deploy the project to GitHub Pages.
-  You can now share this demo via `https://{your_github_userid}.github.io/tfjs-webcam-ML-PACMAN/`
+ You can now share this demo via `https://{your_github_userid}.github.io/tfjs-webcam-ML-PACMAN/`
 
 
-### Acknowledgement
+## Acknowledgement
 
 This project is a modified version based on the official TensorFlow.js demos. 
 For more information and additional context, visit [TensorFlow.js Demos](https://www.tensorflow.org/js/demos).
