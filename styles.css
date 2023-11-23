@@ -58,6 +58,10 @@ header b {
   font-weight: 400;
 }
 
+span.highlight {
+  color: orange;
+}
+
 /** Loading message. */
 #status {
   color: #f8f8f8;
@@ -120,11 +124,11 @@ header b {
 .panel:first-child {
   border-right: 1px dashed #565656;
   padding: 0 22px 0 13px;
-  width: 396px;
+  width: 400px;
 }
 .panel:last-child {
   padding: 0 9px 0 22px;
-  width: 353px;
+  width: 200px;
 }
 .panel-row {
   display: flex;
@@ -163,7 +167,7 @@ header b {
 }
 
 button#predict{
-  margin: 5px auto 0;
+  margin: 20px auto 0;
 }
 
 #train-status {
@@ -296,7 +300,7 @@ button#predict{
   background-position: 98% 46%;
 }
 .panel-row-middle .panel-cell {
-  height: 132px;
+  height: 200px;
 }
 .thumb-box {
   display: inline-block;
@@ -347,7 +351,7 @@ button#predict{
   bottom: 9px;
   color: #f8f8f8;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   left: 9px;
   position: absolute;
   right: 9px;

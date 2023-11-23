@@ -29,7 +29,8 @@ limitations under the License.
 
 <body>
   <header>
-    Control your PAC MAN via gestures in the camera! <br />
+    Control your PAC MAN via gestures in the camera! <img height="48" style="border: white;"
+      src="./images/controller.png" /> <br />
   </header>
   <div id="no-webcam">
     No webcam found. <br />
@@ -57,7 +58,7 @@ limitations under the License.
     <div class="panel joystick-panel">
       <span class="instruction">
         1:
-        Click the [add example] button will add the current camera view as an example for the corresponding control.
+        Click [Add Example] button will add the current camera view as an example for the corresponding control.
       </span>
       <div class="panel-row panel-row-top">
 
@@ -80,7 +81,7 @@ limitations under the License.
               <button class="record-button" id="up" /><span>Add Sample</span></button>
             </div>
             <p>
-              <span id="up-total">0</span> examples
+              <span id="up-total">0</span> <span class="highlight"> UP </span> Examples
             </p>
           </div>
         </div><!-- ./panel-cell -->
@@ -99,14 +100,21 @@ limitations under the License.
               <button class="record-button" id="left" /><span>Add Sample</span></button>
             </div>
             <p>
-              <span id="left-total">0</span> examples
+              <span id="left-total">0</span> <span class="highlight"> LEFT </span> Examples
             </p>
           </div>
         </div><!-- ./panel-cell -->
 
         <div class="panel-cell panel-cell-center panel-cell-fill">
-          <img height="108" width="129" src="./images/joystick.png" />
-        </div><!-- ./panel-cell -->
+          <!-- <img height="108" width="129" src="./images/joystick.png" /> -->
+          <!-- <img height="108" src="./images/controller.png" /> -->
+          <div class="webcam-box-outer">
+            <div class="webcam-box-inner">
+              <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+            </div>
+          </div>
+        </div>
+        <!-- ./panel-cell -->
 
         <div class="panel-cell panel-cell-right">
           <div class="thumb-box">
@@ -114,10 +122,10 @@ limitations under the License.
               <div class="thumb-box-inner">
                 <canvas class="thumb" width=224 height=224 id="right-thumb"></canvas>
               </div>
-              <button class="record-button" id="right" /><span>Add Sample</span></button>
+              <button class="record-button" id="right"><span>Add Sample</span></button>
             </div>
             <p>
-              <span id="right-total">0</span> examples
+              <span id="right-total">0</span> <span class="highlight"> RIGHT </span> Examples
             </p>
           </div>
         </div><!-- ./panel-cell -->
@@ -138,7 +146,7 @@ limitations under the License.
               <button class="record-button" id="down" /><span>Add Sample</span></button>
             </div>
             <p>
-              <span id="down-total">0</span> examples
+              <span id="down-total">0</span> <span class="highlight"> DOWN </span> Examples
             </p>
           </div>
         </div><!-- ./panel-cell -->
@@ -221,11 +229,7 @@ limitations under the License.
 
         </div><!-- /.hyper-params -->
 
-        <div class="webcam-box-outer">
-          <div class="webcam-box-inner">
-            <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-          </div>
-        </div>
+
 
       </div><!-- /.panel-row -->
 
