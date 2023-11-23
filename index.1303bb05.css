@@ -31,6 +31,15 @@ button:focus {
   outline: 0;
 }
 
+span.instruction {
+  color: #f8f8f8;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 5px 0 10px 0;
+  padding: 0;
+}
+
 /** Page header. **/
 
 header {
@@ -39,7 +48,7 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: rgba(255, 255, 255, 0.7);
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.45em;
   overflow: hidden;
   padding: 20px 0;
@@ -51,6 +60,10 @@ header {
 header b {
   color: rgba(255, 255, 255, 1);
   font-weight: 400;
+}
+
+span.highlight {
+  color: orange;
 }
 
 /** Loading message. */
@@ -124,12 +137,12 @@ header b {
 .panel:first-child {
   border-right: 1px dashed #565656;
   padding: 0 22px 0 13px;
-  width: 396px;
+  width: 420px;
 }
 
 .panel:last-child {
   padding: 0 9px 0 22px;
-  width: 353px;
+  width: 200px;
 }
 
 .panel-row {
@@ -152,19 +165,28 @@ header b {
 
 .panel-cell p {
   color: #8b8b8b;
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.controller-panels button {
+.controller-panels button,  button#predict{
   background: none;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
   margin: 0;
   padding: 0;
+}
+
+.big-buttons.play-control {
+  width: 100%;
+  background-color: black;
+}
+
+button#predict{
+  margin: 20px auto 0;
 }
 
 #train-status {
@@ -181,6 +203,7 @@ header b {
   align-items: center;
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
 }
 
 .big-buttons button span {
@@ -313,7 +336,7 @@ header b {
 }
 
 .panel-row-middle .panel-cell {
-  height: 132px;
+  height: 200px;
 }
 
 .thumb-box {
@@ -372,7 +395,7 @@ header b {
   bottom: 9px;
   color: #f8f8f8;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   left: 9px;
   position: absolute;
   right: 9px;
