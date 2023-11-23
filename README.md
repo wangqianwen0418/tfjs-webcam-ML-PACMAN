@@ -6,6 +6,10 @@ We can fine-tune a pretrained [MobileNet](https://github.com/tensorflow/tfjs-exa
 ## How Does the Project Work
 Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 
+<img width="1197" alt="image" src="https://github.com/wangqianwen0418/tfjs-webcam-ML-PACMAN/assets/19774198/aab17b7a-82b7-445f-a921-d7b3337e9147">
+
+
+
 1. **Add Example**: Use your web camera to provide example images for the four different classes (up, down, left, right).
 2. **Train**: Fine-tune the ML model with these images.
 3. **Play**: Start playing Pac-Man by making gestures in front of your web camera.
