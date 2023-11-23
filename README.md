@@ -1,4 +1,4 @@
-# Play Pac-Man using Gestures: Teach an ML model to read your gestures
+# Play Pac-Man using Gestures: Teach an ML model to read your gestures in your web browser
 
 In this project, an ML model will predict directions from an image in web camera.
 We can fine-tune a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model  to predict 4 different classes (i.e, up, down, left, right) as defined by the user.
