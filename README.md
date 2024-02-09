@@ -19,8 +19,9 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 
 #### Preparation
 - Ensure you have a code IDE like [VSCode](https://code.visualstudio.com/download) installed. VSCode is recommended, but feel free to use any IDE of your choice.
-- Create a [GitHub](http://github.com) account, `fork` this repository, and `clone` the forked repository to your local machine. [Learn how to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 - [Install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine.
+- (If you are familar with Github) `fork` this repository, and `clone` the forked repository to your local machine. [Learn how to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+- (If you are not familar with Github) directly download the code from this repo
 
 #### Install npm Dependencies
 1. Open the cloned project folder with VSCode.
