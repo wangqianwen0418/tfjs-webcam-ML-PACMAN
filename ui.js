@@ -78,7 +78,7 @@ async function handler(label) {
   const className = CONTROLS[label];
   const button = document.getElementById(className);
   const total = document.getElementById(className + '-total');
-  while (mouseDown) {
+  if (mouseDown) {
     addExampleHandler(label);
     document.body.setAttribute('data-active', CONTROLS[label]);
     total.innerText = ++totals[label];
