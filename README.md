@@ -1,10 +1,14 @@
-# Play Pac-Man using Gestures: Teach an ML model to read your gestures
+# Play Pac-Man using Gestures: Teach an ML model to read your gestures in your web browser
 
 In this project, an ML model will predict directions from an image in web camera.
 We can fine-tune a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model  to predict 4 different classes (i.e, up, down, left, right) as defined by the user.
 
 ## How Does the Project Work
 Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
+
+<img width="1197" alt="image" src="https://github.com/wangqianwen0418/tfjs-webcam-ML-PACMAN/assets/19774198/aab17b7a-82b7-445f-a921-d7b3337e9147">
+
+
 
 1. **Add Example**: Use your web camera to provide example images for the four different classes (up, down, left, right).
 2. **Train**: Fine-tune the ML model with these images.
@@ -15,8 +19,9 @@ Check out the [Live Demo](https://qianwen.info/tfjs-webcam-ML-PACMAN/)
 
 #### Preparation
 - Ensure you have a code IDE like [VSCode](https://code.visualstudio.com/download) installed. VSCode is recommended, but feel free to use any IDE of your choice.
-- Create a [GitHub](http://github.com) account, `fork` this repository, and `clone` the forked repository to your local machine. [Learn how to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 - [Install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine.
+- (If you are familar with Github) `fork` this repository, and `clone` the forked repository to your local machine. [Learn how to fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+- (If you are not familar with Github) directly download the code from this repo
 
 #### Install npm Dependencies
 1. Open the cloned project folder with VSCode.
