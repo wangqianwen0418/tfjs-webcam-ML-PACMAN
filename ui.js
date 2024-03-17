@@ -15,6 +15,7 @@
  * =============================================================================
  */
 import * as tf from '@tensorflow/tfjs';
+import { resetDataset } from './controller_dataset';
 
 const CONTROLS = ['up', 'down', 'left', 'right'];
 const CONTROL_CODES = [38, 40, 37, 39];
@@ -23,6 +24,12 @@ export function init() {
   document.getElementById('controller').style.display = '';
   statusElement.style.display = 'none';
 }
+
+document.getElementById('reset-dataset-btn').addEventListener('click', () => {
+  resetDataset();
+  alert('Data cleared');
+  clear_data()
+});
 
 const trainStatusElement = document.getElementById('train-status');
 
@@ -40,6 +47,22 @@ const denseUnitsElement = document.getElementById('dense-units');
 export const getDenseUnits = () => +denseUnitsElement.value;
 const statusElement = document.getElementById('status');
 
+export function clear_data() {
+  for (let i = 0; i < totals.length; i++) {
+    totals[i] = 0;
+  }
+
+  for (let i = 0; i < CONTROLS.length; i++) {
+    const control = CONTROLS[i];
+  
+    const thumbCanvas = document.getElementById(control + '-thumb');
+    const ctx = thumbCanvas.getContext('2d');
+    ctx.clearRect(0, 0, thumbCanvas.width, thumbCanvas.height);
+  
+    const totalElement = document.getElementById(control + '-total');
+    totalElement.innerText = '0';
+  }
+}
 export function startPacman() {
   google.pacman.startGameplay();
 }
@@ -107,6 +130,7 @@ export function drawThumb(img, label) {
 }
 
 export function draw(image, canvas) {
+  
   const [width, height] = [224, 224];
   const ctx = canvas.getContext('2d');
   const imageData = new ImageData(width, height);
@@ -120,3 +144,4 @@ export function draw(image, canvas) {
   }
   ctx.putImageData(imageData, 0, 0);
 }
+

@@ -20,6 +20,19 @@ import * as tf from '@tensorflow/tfjs';
  * A dataset for webcam controls which allows the user to add example Tensors
  * for particular labels. This object will concat them into two large xs and ys.
  */
+export function resetDataset() {
+  tf.tidy(() => {
+    if (this.xs != null) {
+      this.xs.dispose();
+      this.xs = null;
+    }
+    if (this.ys != null) {
+      this.ys.dispose();
+      this.ys = null;
+    }
+  });
+}
+
 export class ControllerDataset {
   constructor(numClasses) {
     this.numClasses = numClasses;
