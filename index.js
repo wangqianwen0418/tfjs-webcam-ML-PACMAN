@@ -177,9 +177,74 @@ document.getElementById('predict').addEventListener('click', () => {
   predict();
 });
 
+//functions for testing section
+let testTotal=0;
+let test_imgs = {};
+
+async function predictImage() {  // helper function
+  isPredicting = true;
+  // Capture the frame from the webcam.
+  const img = await getImage();
+
+  // Make a prediction through mobilenet, getting the internal activation of
+  // the mobilenet model, i.e., "embeddings" of the input images.
+  const embeddings = truncatedMobileNet.predict(img);
+
+  // Make a prediction through our newly-trained model using the embeddings
+  // from mobilenet as input.
+  const predictions = model.predict(embeddings);
+
+  // Returns the index with the maximum probability. This number corresponds
+  // to the class the model thinks is the most probable given the input.
+  const predictedClass = predictions.as1D().argMax();
+  const classId = (await predictedClass.data())[0];
+  img.dispose();
+  isPredicting=false;
+  return classId
+}
+
+async function testImage() {  // predicts image, shows prediction, and updates count
+  // update number of test images collected (testTotal)
+  testTotal+=1;
+  console.log('testTotal: ', testTotal)
+  let classId = await predictImage();
+  test_imgs[testTotal] = {};  //initialize dictionary
+  test_imgs[testTotal]['prediction'] = classIdtoName(classId); // update dictionary
+  // show model's prediction
+  displayPrediction(classId);
+  const testTotalElement = document.getElementById('test-total');
+  testTotalElement.textContent = testTotal.toString() + " test images collected";
+}
+
+function classIdtoName(classId){  // helper
+  let className;
+  if (classId == 0){
+    className = "UP";
+  } else if (classId == 1){
+    className = "DOWN";
+  } else if (classId == 2){
+    className = "LEFT";
+  } else {
+    className = "RIGHT";
+  }
+  return className;
+}
+
+function displayPrediction(classId) {
+  const predictionResultElement = document.getElementById('prediction-result');
+  let className = classIdtoName(classId);
+  predictionResultElement.textContent = className;
+}
+
+function recordTrueLabel(trueLabel){
+  test_imgs[testTotal]['trueLabel'] = trueLabel;
+  console.log(test_imgs);
+}
+
 async function init() {
   try {
     webcam = await tfd.webcam(document.getElementById('webcam'));
+    test_webcam = await tfd.webcam(document.getElementById('test-webcam'));
   } catch (e) {
     console.log(e);
     document.getElementById('no-webcam').style.display = 'block';
@@ -194,6 +259,13 @@ async function init() {
   const screenShot = await webcam.capture();
   truncatedMobileNet.predict(screenShot.expandDims(0));
   screenShot.dispose();
+
+  // testing section
+  document.getElementById('test-capture').addEventListener('click', testImage); //webcam capture
+  document.getElementById('up-button').addEventListener('click', () => recordTrueLabel('UP'));
+  document.getElementById('down-button').addEventListener('click', () => recordTrueLabel('DOWN'));
+  document.getElementById('left-button').addEventListener('click', () => recordTrueLabel('LEFT'));
+  document.getElementById('right-button').addEventListener('click', () => recordTrueLabel('RIGHT'));
 }
 
 // Initialize the application.

@@ -146,6 +146,7 @@
       <span class="instruction">
         <!-- add your instructions here -->
       </span>
+
       <!-- Big buttons. -->
       <div class="panel-row big-buttons">
         <button id="train">
@@ -212,14 +213,47 @@
 
         </div><!-- /.hyper-params -->
 
-
-
       </div><!-- /.panel-row -->
 
     </div><!-- /.panel -->
 
   </div><!-- /#controller -->
 
+  <div class="testing-section"><!-- testing section -->
+    <span class="section_header">
+      Test and evaluate your model (optional)
+    </span>
+    <div class="controller-panels">
+      <div class="panel">
+        <div class="panel-row" id="test-col1">
+          <div>
+            <video autoplay playsinline muted id="test-webcam" width="224" height="224"></video>
+            <div id="test-total-text">
+              <div id="test-total">0 test images collected</div>
+            </div>
+          </div>
+          <div class="big-buttons">
+            <button id="test-capture">
+              <img width="66" height="66" src="./images/camera.svg" />
+              <span>take image</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="subsection-header">Model prediction:
+          <div id="prediction-result"></div>
+        </div>
+        <div class="subsection-header">True label:</div>
+        <div id="true-label-options">
+          <button class="control-button" id="up-button">UP</button>
+          <button class="control-button" id="down-button">DOWN</button>
+          <button class="control-button" id="left-button">LEFT</button>
+          <button class="control-button" id="right-button">RIGHT</button>
+        </div>        
+      </div>
+  </div>
 
   <!-- start of pac man -->
 

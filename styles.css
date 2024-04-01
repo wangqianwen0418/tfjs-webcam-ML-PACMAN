@@ -164,6 +164,8 @@ span.highlight {
 .big-buttons.play-control {
   width: 100%;
   background-color: black;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 button#predict{
@@ -232,11 +234,12 @@ button#predict{
 .dropdown {
   flex-direction: column;
   width: 110px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .dropdown label {
-  color: #777;
-  font-size: 11px;
+  color: #999;
+  font-size: 18px;
   display: block;
   font-weight: 300;
   line-height: 1;
@@ -253,7 +256,7 @@ button#predict{
   border-radius: 0;
   color: #c9c9c9;
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   outline: none;
   padding: 6px 0;
   width: 100%;
@@ -278,9 +281,65 @@ button#predict{
   pointer-events: none;
 }
 
+/** Testing section. **/
+.testing-section {
+  background-image: linear-gradient(to right, #2a2a2a, black);
+  padding: 15px;
+}
+#test-col1 {
+  justify-content: center;
+  align-items: center;
+}
+#test-webcam {
+  height: 200px;
+  transform: scaleX(-1);
+  margin-bottom: 5px;
+}
+#test-total-text{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+span.section_header {
+  border-bottom: 2px solid #484848;
+  color: #f8f8f8;
+  font-size: 28px;
+  font-weight: 350;
+  line-height: 1.1;
+  margin: 0px 0 0 0;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.subsection-header {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+}
+#prediction-result {
+  margin-top: 7px;
+}
+#true-label-options {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 5px; /* Add gap between grid items */
+}
+button.control-button {
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 19px;
+  font-weight: 200;
+}
+
 /** Joystick panel. **/
 .joystick-panel {
   margin-top: 13px;
+  margin-bottom: 13px;
 }
 .panel-cell .help-text {
   font-size: 10px;
